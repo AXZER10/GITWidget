@@ -1,14 +1,14 @@
 {
   "expo": {
     "name": "Widget_APP",
-    "slug": "Widget_APP",
+    "slug": "calendar-widget",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -16,6 +16,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.yourcompany.yourapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -27,10 +28,35 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "react-native-android-widget",
+        {
+          "widgets": [
+            {
+              "name": "MyWidget",
+              "providerClassName": "com.yourcompany.yourapp.MyWidgetProvider",
+              "description": "This is a sample widget",
+              "previewImage": "./assets/images/download.jpg",
+              "configureActivity": "com.yourcompany.yourapp.MyWidgetConfigureActivity",
+              "minHeight": "110dp",
+              "minWidth": "250dp"
+            }
+          ]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "b9d32ded-c205-43d2-b2fc-0fbd7736f327"
+      }
+    },
+    "owner": "rijul_sarji"
   }
 }
