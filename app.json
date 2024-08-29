@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Widget_APP",
+    "name": "MyWidget",
     "slug": "calendar-widget",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,9 +13,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.yourapp"
     },
     "android": {
+      "jsEngine": "jsc",
       "package": "com.yourcompany.yourapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
@@ -40,7 +42,11 @@
               "previewImage": "./assets/images/download.jpg",
               "configureActivity": "com.yourcompany.yourapp.MyWidgetConfigureActivity",
               "minHeight": "110dp",
-              "minWidth": "250dp"
+              "minWidth": "110dp",
+              "initialLayout": {
+                "width": "110dp",
+                "height": "110dp"
+              }
             }
           ]
         }
@@ -57,6 +63,7 @@
         "projectId": "b9d32ded-c205-43d2-b2fc-0fbd7736f327"
       }
     },
-    "owner": "rijul_sarji"
-  }
+    "owner": "team_carnage"
+  },
+  "name": "MyWidget"
 }

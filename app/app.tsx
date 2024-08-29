@@ -1,10 +1,11 @@
-import { Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { View, Text, SafeAreaView, AppRegistry } from "react-native";
+import React from "react";
 import CustomButton from "@/components/CustomButton";
 import { MyWidget } from "./nayi-file";
 
-export default function Index() {
+const App = () => {
   const HandleButton = (): void => {};
+
   return (
     <SafeAreaView className="bg-slate-900 h-full">
       <View className="items-center justify-center w-full">
@@ -43,8 +44,9 @@ export default function Index() {
             ContainerStyles="mt-4"
           />
         </View>
-        <MyWidget />
       </View>
     </SafeAreaView>
   );
-}
+};
+
+export default App;

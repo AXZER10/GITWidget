@@ -1,6 +1,6 @@
 {
   "name": "widget_app",
-  "main": "expo-router/entry",
+  "main": "/app/index.ts",
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
